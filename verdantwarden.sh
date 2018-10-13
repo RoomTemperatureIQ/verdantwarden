@@ -49,6 +49,12 @@ elif [ "$1" -eq "remove" ]; then
     # USB Removed - PANIC!
     # sudo cryptsetup -q luksErase /dev/sdX1
     # dd LUKS key header
+
+    # soft-bricking:
+    # make sure to dd an image of the boot record to restore later
+    # dd randomizes sector data making the disks boot record indistinguishable from the encrypted data
+    # get sizeof boot record + LUKS header
+    # align to sector
     # dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480
     
     # enable magic commands
