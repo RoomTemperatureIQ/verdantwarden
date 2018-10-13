@@ -29,6 +29,8 @@ fi
 #    /var/log/dmesg
 #    ssh keys
 #    certificates
+#    VPN secrets
+#    gnome-keyring
 
 # systemd at boot:
 #    Fork Bomb - https://www.howtogeek.com/125157/8-deadly-commands-you-should-never-run-on-linux/
