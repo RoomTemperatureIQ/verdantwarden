@@ -1,4 +1,4 @@
-# verdantwarden
+# verdantwarden  
 
 Feature | Program | Implemented | Priority | Notes |   
 ------------- | ------------- | ------------- | ------------- | -------------  
@@ -8,7 +8,7 @@ Anti-Forensic USB Kill Switch | udev (trigger) / modprobe (load silk-guardian KL
 BlueTooth Security Fob Device (Lock Session) | blueproximity | [❌] | critical | http://www.daniloaz.com/en/automatically-lock-unlock-your-screen-by-bluetooth-device-proximity/  
 Kernel Memory Poisoning |  | [❌] | critical | https://www.kernel.org/doc/html/v4.18/security/self-protection.html#memory-poisoning https://git-tails.immerda.ch/tails/plain/features/erase_memory.feature   
 
-# USB Armory - hotplug read-only (unclean shutdown), TMPFS cloud sync
+# USB Armory - hotplug read-only (unclean shutdown), TMPFS cloud sync  
 https://gist.github.com/yann2192/f989143c86567237460e  
 https://hacksr.blogspot.com/2012/05/ssh-unlock-with-fully-encrypted-ubuntu.html  
 https://github.com/inversepath/usbarmory/wiki/Secure-boot  
@@ -16,12 +16,12 @@ https://github.com/offensive-security/kali-arm-build-scripts/blob/master/usbarmo
 [✔]  
 USB Armory loads up `dropbear` / `tinyssh` -> requires login to unlock `luks` partition
 for uses refer to: https://github.com/inversepath/usbarmory/wiki/Applications  
-* VPN
-* Pentest - https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory
+* VPN  
+* Pentest - https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory  
 
-# Anti-Forensic USB Kill Switch (udev hotplug)
+# Anti-Forensic USB Kill Switch (udev hotplug)  
 todo: figure out `udev` rule number priority for hotplug (83 in example)  
-in the event that the computer is started up under duress there is the `LUKS` Nuke
+in the event that the computer is started up under duress there is the `LUKS` Nuke  
 in the event that the computer will be stolen/seized there is `verdantwarden.sh` using `silk-guardian`  
 Example - https://wiki.archlinux.org/index.php/udev#udev_rule_example  
 
