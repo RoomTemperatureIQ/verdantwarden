@@ -50,10 +50,10 @@ requires `linux-headers` to be installed
 `# if removed: `  
 `# dd LUKS key header`  
 
-`# sudo cryptsetup luksErase /dev/sdX1`
-`# dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480`
+`# sudo cryptsetup luksErase /dev/sdX1`  
+`# dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480`  
 `# sync`  
 `# sudo rmmod silk.ko`  
-`# sudo shutdown now`
+`# sudo shutdown now`  
 
 
