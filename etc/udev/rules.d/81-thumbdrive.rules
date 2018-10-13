@@ -1,1 +1,1 @@
-
+KERNEL=="sd?1", ATTRS{idVendor}=="13fe", ATTRS{idProduct}=="1f00", ATTRS{serial}=="50E6920B000AE8", SYMLINK+="hackaday", RUN+="/home/mike/notify-plugin.sh 'HackaDay Thumbdrive:' 'Connected as: $KERNEL'"
