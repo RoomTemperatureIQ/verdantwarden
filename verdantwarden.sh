@@ -49,7 +49,8 @@ elif [ "$1" -eq "remove" ]; then
     # USB Removed - PANIC!
     # sudo cryptsetup -q luksErase /dev/sdX1
     # dd LUKS key header
-
+    # kernel module versioning: https://serverfault.com/questions/10439/how-do-you-check-the-version-of-a-ko-kernel-module-in-linux
+    
     # soft-bricking:
     # make sure to dd an image of the boot record to restore later
     # dd randomizes sector data making the disks boot record indistinguishable from the encrypted data
