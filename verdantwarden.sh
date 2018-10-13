@@ -15,7 +15,7 @@ if [ ! -f $udev_hotplug_script ]; then
     sudo echo "ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script/verdantwarden.sh remove"" > $udev_hotplug_script
 fi
 
-# silk-guardian shred:
+# silk-guardian shred - https://sandeeprhce.blogspot.com/2011/05/critical-system-files-in-linux.html
 #    /etc/passwd
 #    /etc/shadow
 #    /etc/groups
