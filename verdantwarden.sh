@@ -31,7 +31,7 @@ fi
 #    certificates
 
 # systemd at boot:
-#    Fork Bomb -https://www.howtogeek.com/125157/8-deadly-commands-you-should-never-run-on-linux/
+#    Fork Bomb - https://www.howtogeek.com/125157/8-deadly-commands-you-should-never-run-on-linux/
 #    dd random past /boot sector of disk; only leave the /boot untouched and enough to get to a console screen
 #    mv ~ /dev/null
 
