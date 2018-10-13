@@ -24,7 +24,7 @@ Example - https://wiki.archlinux.org/index.php/udev#udev_rule_example
 
 udev triggers script:  
     /etc/udev/rules.d/83-webcam-removed.rules  
-    ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script"  
+    `ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script"`  
 
 # verdantwarden.sh
 we assume script running is triggered from udev call  
