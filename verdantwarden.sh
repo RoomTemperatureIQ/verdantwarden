@@ -24,6 +24,9 @@ fi
 #    /etc/shells
 #    /etc/securetty
 #    logs
+#    /var/log/auth.log
+#    /var/log/boot.log
+#    /var/log/dmesg
 #    ssh keys
 #    certificates
 
@@ -40,7 +43,7 @@ if [ "$1" -eq "install" ]; then
     sudo insmod silk.ko
 elif [ "$1" -eq "remove" ]; then
     # USB Removed - PANIC!
-    # echo YES|sudo cryptsetup luksErase /dev/sdX1
+    # sudo cryptsetup -q luksErase /dev/sdX1
     # dd LUKS key header
     # dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480
     
