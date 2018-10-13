@@ -23,13 +23,23 @@ for uses refer to: https://github.com/inversepath/usbarmory/wiki/Applications
 Example - https://wiki.archlinux.org/index.php/udev#udev_rule_example
 
 udev triggers script:  
-    /etc/udev/rules.d/83-webcam-removed.rules
-    ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script"
+    /etc/udev/rules.d/83-webcam-removed.rules  
+    ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script"  
 
 # verdantwarden.sh
 we assume script running is triggered from udev call  
+what happens when user executed system shutdown is called for the KLM unloading
+* revise silk.ko
 requires `linux-headers` to be installed  
 
-sudo insmod silk.ko  
+`# USB Detected`  
+`# if inserted, load silk.ko KLM`  
+`sudo insmod silk.ko`  
+
+`# USB Removed - PANIC!`  
+`# if removed, unload silk.ko KLM`  
+`sudo rmmod silk.ko`  
+``  
+
 
 
