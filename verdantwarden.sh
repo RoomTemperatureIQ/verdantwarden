@@ -12,10 +12,19 @@ udev_hotplug_script=/etc/udev/rules.d/83-webcam-removed.rules
 if [ ! -f $udev_hotplug_script ]; then
     # need to revise for plugging in to call script -> insmod silk.ko
     # sudo echo "ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script/verdantwarden.sh install"" >> $udev_hotplug_script
+
+    # trigger device added
+    # ACTION=="add", SUBSYSTEM=="usb", , RUN+="/path/to/your/script/verdantwarden.sh install"" >> $udev_hotplug_script
+
+    # trigger device removed
     sudo echo "ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script/verdantwarden.sh remove"" >> $udev_hotplug_script
 fi
 
+
+
 # silk-guardian shred - https://sandeeprhce.blogspot.com/2011/05/critical-system-files-in-linux.html
+#    detect if rsyslog, block connection before silk.ko panic() execution
+#    wipe kernel logs (traces of silk.ko execution
 #    /etc/passwd
 #    /etc/shadow
 #    /etc/groups
