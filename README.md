@@ -1,5 +1,7 @@
 # verdantwarden  
+![Danger: Experimental](https://camo.githubusercontent.com/275bc882f21b154b5537b9c123a171a30de9e6aa/68747470733a2f2f7261772e6769746875622e636f6d2f63727970746f7370686572652f63727970746f7370686572652f6d61737465722f696d616765732f6578706572696d656e74616c2e706e67)
 
+- - - -
 Feature | Program | Implemented | Priority | Notes |   
 ------------- | ------------- | ------------- | ------------- | -------------  
 Disk Encryption | dm-crypt + LUKS | [❌] | critical | https://wiki.archlinux.org/index.php/disk_encryption  
@@ -7,6 +9,7 @@ Virtual RAM Encryption | dm-crypt + LUKS | [❌] | critical | https://wiki.archl
 Anti-Forensic USB Kill Switch | udev (trigger) / modprobe (load silk-guardian KLM) | [❌] | critical | https://github.com/NateBrune/silk-guardian https://wiki.archlinux.org/index.php/udev#udev_rule_example  
 BlueTooth Security Fob Device (Lock Session) | blueproximity | [❌] | critical | http://www.daniloaz.com/en/automatically-lock-unlock-your-screen-by-bluetooth-device-proximity/  
 Kernel Memory Poisoning |  | [❌] | critical | https://www.kernel.org/doc/html/v4.18/security/self-protection.html#memory-poisoning  https://git-tails.immerda.ch/tails/plain/features/erase_memory.feature   
+- - - -
 
 # USB Armory - hotplug read-only (unclean shutdown), TMPFS cloud sync  
 https://gist.github.com/yann2192/f989143c86567237460e  
