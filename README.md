@@ -6,9 +6,11 @@ Feature | Program | Implemented | Priority | Notes |
 ------------- | ------------- | ------------- | ------------- | -------------  
 Disk Encryption | dm-crypt + LUKS | [❌] | critical | https://wiki.archlinux.org/index.php/disk_encryption  
 Virtual RAM Encryption | dm-crypt + LUKS | [❌] | critical | https://wiki.archlinux.org/index.php/Dm-crypt/Swap_encryption  
+Kernel Memory Poisoning |  | [❌] | critical | https://www.kernel.org/doc/html/v4.18/security/self-protection.html#memory-poisoning  https://git-tails.immerda.ch/tails/plain/features/erase_memory.feature   
 Anti-Forensic USB Kill Switch | udev (trigger) / modprobe (load silk-guardian KLM) | [❌] | critical | https://github.com/NateBrune/silk-guardian https://wiki.archlinux.org/index.php/udev#udev_rule_example  
 BlueTooth Security Fob Device (Lock Session) | blueproximity | [❌] | critical | http://www.daniloaz.com/en/automatically-lock-unlock-your-screen-by-bluetooth-device-proximity/  
-Kernel Memory Poisoning |  | [❌] | critical | https://www.kernel.org/doc/html/v4.18/security/self-protection.html#memory-poisoning  https://git-tails.immerda.ch/tails/plain/features/erase_memory.feature   
+System Tampering Video Surveillance Detection | Motion | [❌] | critical | https://github.com/Motion-Project/motion  
+
 - - - -
 
 # USB Armory - hotplug read-only (unclean shutdown), TMPFS cloud sync  
