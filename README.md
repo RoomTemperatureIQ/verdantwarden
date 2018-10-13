@@ -36,6 +36,7 @@ https://www.offensive-security.com/kali-linux/kali-encrypted-usb-persistence/
 https://www.offensive-security.com/kali-linux/raspberry-pi-luks-disk-encryption/  
 https://wiki.archlinux.org/index.php/dm-crypt/Device_encryption#Removing_LUKS_keys  
 https://wiki.archlinux.org/index.php/Dm-crypt/Drive_preparation#Wipe_LUKS_header  
+https://superuser.com/questions/1168928/wipe-luks-partition-in-pre-boot/1168933#1168933  
 we assume script running is triggered from udev call  
 what happens when user executed system shutdown is called for the KLM unloading  
 what happens when USB hotplug removed; calls what  
