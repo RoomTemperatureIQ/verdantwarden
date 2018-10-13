@@ -19,17 +19,27 @@ for uses refer to: https://github.com/inversepath/usbarmory/wiki/Applications
 * VPN
 * Pentest - https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory
 
-# Anti-Forensic USB Kill Switch
-Example - https://wiki.archlinux.org/index.php/udev#udev_rule_example
+# Anti-Forensic USB Kill Switch (udev hotplug)
+todo: figure out `udev` rule number priority for hotplug (83 in example)  
+in the event that the computer is started up under duress there is the `LUKS` Nuke
+in the event that the computer will be stolen/seized there is `verdantwarden.sh` using `silk-guardian`  
+Example - https://wiki.archlinux.org/index.php/udev#udev_rule_example  
 
 udev triggers script:  
     /etc/udev/rules.d/83-webcam-removed.rules  
     `ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script"`  
 
 # verdantwarden.sh
+https://www.kali.org/tutorials/emergency-self-destruction-luks-kali/  
+https://www.kali.org/tutorials/nuke-kali-linux-luks/  
+https://www.offensive-security.com/kali-linux/kali-encrypted-usb-persistence/  
+https://www.offensive-security.com/kali-linux/raspberry-pi-luks-disk-encryption/  
+https://wiki.archlinux.org/index.php/dm-crypt/Device_encryption#Removing_LUKS_keys  
+https://wiki.archlinux.org/index.php/Dm-crypt/Drive_preparation#Wipe_LUKS_header  
 we assume script running is triggered from udev call  
-what happens when user executed system shutdown is called for the KLM unloading
-* revise silk.ko
+what happens when user executed system shutdown is called for the KLM unloading  
+what happens when USB hotplug removed; calls what  
+* revise silk.ko  
 requires `linux-headers` to be installed  
 
 `# USB Detected`  
@@ -37,9 +47,13 @@ requires `linux-headers` to be installed
 `sudo insmod silk.ko`  
 
 `# USB Removed - PANIC!`  
-`# if removed, unload silk.ko KLM`  
-`sudo rmmod silk.ko`  
-``  
+`# if removed: `  
+`# dd LUKS key header`  
 
+`# sudo cryptsetup luksErase /dev/sdX1`
+`# dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480`
+`# sync`  
+`# sudo rmmod silk.ko`  
+`# sudo shutdown now`
 
 
