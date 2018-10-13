@@ -25,10 +25,20 @@ elif [ "$1" -eq "remove" ]; then
     # USB Removed - PANIC!
     # if removed:
     # dd LUKS key header
-    # sudo cryptsetup luksErase /dev/sdX1
+    # echo YES|sudo cryptsetup luksErase /dev/sdX1
     # dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480
+    
+    # enable magic commands
+    # echo 1 > /proc/sys/kernel/sysrq 
+
+    # sync mounted filesystems, perform twice just in case
+    # echo s > /proc/sysrq-trigger
+    # echo s > /proc/sysrq-trigger
     # sync
     # sudo rmmod silk.ko
+
+    # shutdown the computer - use 'o' for shutdown, 'b' for reboot
+    # echo o > /proc/sysrq-trigger
     # sudo shutdown now
 else
     # probably manually called not from udev
