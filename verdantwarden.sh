@@ -24,7 +24,7 @@ fi
 
 # silk-guardian shred - https://sandeeprhce.blogspot.com/2011/05/critical-system-files-in-linux.html
 #    detect if rsyslog, block connection before silk.ko panic() execution
-#    wipe kernel logs (traces of silk.ko execution
+#    wipe kernel logs (traces of silk.ko post-execution)
 #    /etc/passwd
 #    /etc/shadow
 #    /etc/groups
