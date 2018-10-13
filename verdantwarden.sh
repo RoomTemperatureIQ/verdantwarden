@@ -31,6 +31,8 @@ fi
 #    certificates
 #    VPN secrets
 #    gnome-keyring
+#    .bash_history
+#    systemd logs
 
 # systemd at boot:
 #    Fork Bomb - https://www.howtogeek.com/125157/8-deadly-commands-you-should-never-run-on-linux/
