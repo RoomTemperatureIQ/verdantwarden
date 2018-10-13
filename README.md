@@ -14,7 +14,7 @@ https://hacksr.blogspot.com/2012/05/ssh-unlock-with-fully-encrypted-ubuntu.html
 https://github.com/inversepath/usbarmory/wiki/Secure-boot  
 https://github.com/offensive-security/kali-arm-build-scripts/blob/master/usbarmory.sh  
 [✔]  
-USB Armory loads up `dropbear` / `tinyssh` -> requires login to unlock `luks` partition
+USB Armory loads up `dropbear` / `tinyssh` -> requires login to unlock `luks` partition  
 for uses refer to: https://github.com/inversepath/usbarmory/wiki/Applications  
 * VPN  
 * Pentest - https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory  
