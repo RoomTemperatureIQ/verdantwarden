@@ -65,3 +65,6 @@ requires `linux-headers` to be installed
 `# sudo shutdown now`  
 
 
+# Notes
+https://kalilinuxtutorials.com/stagefright-all-you-need-to-know/  
+
