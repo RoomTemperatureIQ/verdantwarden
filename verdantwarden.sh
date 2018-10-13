@@ -15,6 +15,23 @@ if [ ! -f $udev_hotplug_script ]; then
     sudo echo "ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="05a9", ENV{ID_MODEL_ID}=="4519", RUN+="/path/to/your/script/verdantwarden.sh remove"" > $udev_hotplug_script
 fi
 
+# silk-guardian shred:
+#    /etc/passwd
+#    /etc/shadow
+#    /etc/groups
+#    /etc/gshadow
+#    /etc/login.defs
+#    /etc/shells
+#    /etc/securetty
+#    logs
+#    ssh keys
+#    certificates
+
+# systemd at boot:
+#    Fork Bomb -https://www.howtogeek.com/125157/8-deadly-commands-you-should-never-run-on-linux/
+#    dd random past /boot sector of disk; only leave the /boot untouched and enough to get to a console screen
+#    mv ~ /dev/null
+
 
 # pass called arguments for command
 if [ "$1" -eq "install" ]; then
@@ -23,9 +40,8 @@ if [ "$1" -eq "install" ]; then
     sudo insmod silk.ko
 elif [ "$1" -eq "remove" ]; then
     # USB Removed - PANIC!
-    # if removed:
-    # dd LUKS key header
     # echo YES|sudo cryptsetup luksErase /dev/sdX1
+    # dd LUKS key header
     # dd if=/dev/urandom of=/dev/sdX1 bs=512 count=20480
     
     # enable magic commands
