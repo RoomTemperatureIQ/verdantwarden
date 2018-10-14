@@ -10,6 +10,7 @@ Kernel Memory Poisoning |  | [❌] | critical | https://www.kernel.org/doc/html/
 Anti-Forensic USB Kill Switch | udev (trigger) / modprobe (load silk-guardian KLM) | [❌] | critical | https://github.com/NateBrune/silk-guardian https://wiki.archlinux.org/index.php/udev#udev_rule_example  
 BlueTooth Security Fob Device (Lock Session) | blueproximity | [❌] | critical | http://www.daniloaz.com/en/automatically-lock-unlock-your-screen-by-bluetooth-device-proximity/  
 System Tampering Video Surveillance Detection | Motion | [❌] | critical | https://github.com/Motion-Project/motion  
+Disable Internal Radios | rfkill | [❌] | critical | https://wiki.archlinux.org/index.php/Wireless_network_configuration#Rfkill_caveat  
 
 - - - -
 
